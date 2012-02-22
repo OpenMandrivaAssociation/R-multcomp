@@ -1,26 +1,27 @@
-%bcond_without bootstrap
+%bcond_with bootstrap
 %global packname  multcomp
 %global rlibdir  %{_libdir}/R/library
 
 Name:             R-%{packname}
 Version:          1.2_9
-Release:          1
+Release:          2
 Summary:          Simultaneous Inference in General Parametric Models
 Group:            Sciences/Mathematics
 License:          GPL-2
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_1.2-9.tar.gz
-Requires:         R-stats R-graphics R-mvtnorm R-survival 
-%if %{with bootstrap}
-Requires:         R-lme4 R-nlme R-robustbase R-coin R-MASS R-car R-foreign R-xtable R-sandwich R-lmtest R-coxme 
-%else
-Requires:         R-lme4 R-nlme R-robustbase R-mboost R-coin R-MASS R-car R-foreign R-xtable R-sandwich R-lmtest R-coxme 
+Requires:         R-stats R-graphics R-mvtnorm R-survival R-lme4 R-nlme
+Requires:         R-robustbase R-coin R-MASS R-car R-foreign R-xtable
+Requires:         R-sandwich R-lmtest R-coxme texlive-inconsolata
+%if %{without bootstrap}
+Requires:         R-mboost
 %endif
-BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-stats R-graphics R-mvtnorm R-survival
-%if %{with bootstrap}
-BuildRequires:    R-lme4 R-nlme R-robustbase R-coin R-MASS R-car R-foreign R-xtable R-sandwich R-lmtest R-coxme 
-%else
-BuildRequires:    R-lme4 R-nlme R-robustbase R-mboost R-coin R-MASS R-car R-foreign R-xtable R-sandwich R-lmtest R-coxme 
+BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-stats
+BuildRequires:    R-graphics R-mvtnorm R-survival R-lme4 R-nlme R-robustbase
+BuildRequires:    R-coin R-MASS R-car R-foreign R-xtable R-sandwich R-lmtest
+BuildRequires:    R-coxme texlive-inconsolata
+%if %{without bootstrap}
+BuildRequires:    R-mboost
 %endif
 %rename R-cran-multcomp
 

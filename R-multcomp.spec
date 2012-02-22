@@ -17,10 +17,10 @@ Requires:         R-sandwich R-lmtest R-coxme texlive-inconsolata
 %if %{without bootstrap}
 Requires:         R-mboost
 %endif
-BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-stats
-BuildRequires:    R-graphics R-mvtnorm R-survival R-lme4 R-nlme R-robustbase
-BuildRequires:    R-coin R-MASS R-car R-foreign R-xtable R-sandwich R-lmtest
-BuildRequires:    R-coxme texlive-inconsolata
+BuildRequires:    R-devel Rmath-devel texlive-collection-latex
+BuildRequires:    R-statsR-graphics R-mvtnorm R-survival R-lme4 R-nlme
+BuildRequires:    R-robustbase R-coin R-MASS R-car R-foreign R-xtable
+BuildRequires:    R-sandwich R-lmtest R-coxme texlive-inconsolata
 %if %{without bootstrap}
 BuildRequires:    R-mboost
 %endif

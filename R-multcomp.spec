@@ -5,7 +5,7 @@
 
 Name:             R-%{packname}
 Version:          1.2_9
-Release:          2
+Release:          3
 Summary:          Simultaneous Inference in General Parametric Models
 Group:            Sciences/Mathematics
 License:          GPL-2

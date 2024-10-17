@@ -9,7 +9,7 @@ Release:          3
 Summary:          Simultaneous Inference in General Parametric Models
 Group:            Sciences/Mathematics
 License:          GPL-2
-URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
+URL:              https://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_1.2-9.tar.gz
 Requires:         R-stats R-graphics R-mvtnorm R-survival R-lme4 R-nlme
 Requires:         R-robustbase R-coin R-MASS R-car R-foreign R-xtable
